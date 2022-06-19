@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .flex {
+        display: flex;
+      }
+      .yingying {
+        box-shadow: 0px 12px 8px -12px #000;
+        border-radius: 10px;
+      }
+
+      .baiSe {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohan {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 2" class="baiSe yingying">
+      <!--头像-->
+      <div
+        class="flex yingying"
+        style="padding: 10px; align-items: center; justify-content: center"
+      >
+        <img
+          src="https://img2.woyaogexing.com/2022/06/16/947b8e01cea24cc9!400x400.jpg"
+          width="40px"
+          height="40px"
+          alt=""
+        />
+        <!--名字-->
+        <div style="margin-left: 10px">李邵青</div>
+      </div>
+      <div class="daohan">你好</div>
+      <div class="daohan">我叫李邵青</div>
+      <div class="daohan">欢迎！</div>
+      <div class="daohan">这是</div>
+      <div class="daohan">导航栏</div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+      <!--头部栏-->
+      <div style="height: 60px; z-index: 1" class="baiSe yingying"></div>
+      <!--内容区-->
+      <div style="overflow: auto" class="flex1 flex">
+        <!--内容左区-->
+        <div style="flex: 3" class="flex column mg8">
+          <!--数据区-->
+          <div class="flex">
+            <!--数据块-->
+            <div style="height: 100px" class="flex1 baiSe mgr8 yingying"></div>
+            <div style="height: 100px" class="flex1 baiSe mgr8 yingying"></div>
+            <div style="height: 100px" class="flex1 baiSe mgr8 yingying"></div>
+            <div style="height: 100px" class="flex1 baiSe yingying"></div>
+          </div>
+          <!--列表区-->
+          <div class="flex column">
+            <!--列表项-->
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+            <div style="height: 160px" class="baiSe mgt8 yingying"></div>
+          </div>
+        </div>
+        <!--内容右区-->
+        <div style="flex: 1" class="flex column mgr8 mgt8">
+          <!--提示区-->
+          <div style="height: 150px" class="baiSe yingying"></div>
+          <!--消息区-->
+          <div style="height: 300px" class="baiSe mgt8 yingying"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
